@@ -1,7 +1,12 @@
+import { createContext } from "react";
 
-function MovieContext(){
 
-    return(
+
+function MovieContext() {
+
+    // const MovieContext = createContext();
+
+    return (
         <>
             <h1>Teste MovieContext</h1>
         </>
