@@ -1,10 +1,13 @@
+// import 
 
-function Header(){
+function Header( {handleSubmit} ){
 
     return(
-        <div>
-
-        </div>
+        <header>
+            <h1>Header - Vídeos</h1>
+            <p>Navigation</p>
+        </header>
+        
     );
 }
 
