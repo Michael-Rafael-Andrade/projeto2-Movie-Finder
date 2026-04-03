@@ -1,5 +1,5 @@
 import Navigation from "./Navigation.js";
-import Form from "./Forms.js";
+import Forms from "./Forms.js";
 
 
 function Header({handleSubmit}){
@@ -7,7 +7,7 @@ function Header({handleSubmit}){
     return(
         <header>
             <h1>Header - Vídeos</h1>
-            <Form handleSubmit={handleSubmit}/>
+            <Forms handleSubmit={handleSubmit}/>
             <Navigation/>
         </header>
         

@@ -24,7 +24,7 @@ function App() {
             <Route path='/comedy' element={<Item searchTerm='Comedy' />} />
 
             {/*  Rotas dinâmicas  */}
-            {/* /* <Route path='/search/:searchInput' element={<search} */}
+            {/* /* <Route path='/search/:searchInput' element={<Search />} */}
 
 
 
