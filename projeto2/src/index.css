@@ -148,11 +148,14 @@ ul li img {
 }
 
 .movie-card {
-  background-color: #ffffff;
-  width: 230px;
+  background-color: #dbdbdb;
+  width: 350px;
+  height: 350px;
+  object-fit: contain;
   /* Define uma altura mínima para que todos os cards fiquem iguais */
   min-height: 520px;
   border-radius: 12px;
+  border-bottom: 2px solid #edeff0;
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   display: flex;
@@ -182,6 +185,7 @@ ul li img {
   flex-direction: column;
   /* Faz com que este container ocupe todo o espaço restante */
   flex-grow: 1;
+  justify-content: flex-start;
   gap: 10px;
 }
 
