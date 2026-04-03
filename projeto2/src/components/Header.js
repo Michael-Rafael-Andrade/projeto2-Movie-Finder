@@ -6,7 +6,7 @@ function Header({handleSubmit}){
 
     return(
         <header>
-            <h1>Projeto 2 - Front End II - Vídeos</h1>
+            <h1>Projeto 2 - Front End II - Filmes</h1>
             <Forms handleSubmit={handleSubmit}/>
             <Navigation/>
         </header>

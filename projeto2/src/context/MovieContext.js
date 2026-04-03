@@ -18,16 +18,20 @@ function MovieContextProvider(props) {
         setLoading(true);
         setMovies([]);
 
-        console.log("true");
+        // console.log("true");
         try {
-            const url = `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${query}`;
-            // const response = await fetch(url);
-            // const data = await response.json();
+            const url = `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${query}&language=pt-BR`;
+           
+            const response = await fetch(url);
+            // const response = await axios.get(url);
+            const data = await response.json();
 
-            const response = await axios.get(url);
+            if(data.results){
+                setMovies(data.results);
+            }
 
-            console.log("response");
-            setMovies(response.data.results || []);
+            // console.log("response");
+            // setMovies(response.data.results);
 
         } catch (error) {
             console.error("Erro ao buscar vídeos: ", error);

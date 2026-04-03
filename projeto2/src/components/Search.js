@@ -5,7 +5,7 @@ function Search({searchTerm}){
     return(
 
         <div>
-            <h2>{searchTerm} Movie</h2>
+            <h2 style={{ textTransform: 'capitalize' }}>Resultados para: {searchTerm}</h2>
             <Container searchTerm={searchTerm} />
         </div>
     );

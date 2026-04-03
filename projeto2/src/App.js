@@ -10,8 +10,10 @@ import Search from './components/Search';
 
 
 function SearchWrapper() {
-  const { searchInput } = useParams(0);
-  return <Search searchTerm={searchInput} />
+  // const { searchInput } = useParams(0);
+  const { searchInput } = useParams();
+  const cleanTerm = searchInput ? searchInput.replace(/-/g, ' ') : "";
+  return <Search searchTerm={cleanTerm} />
 }
 
 
@@ -24,9 +26,23 @@ function HeaderWrapper() {
 
   function handleSubmit(e, searchInput) {
     e.preventDefault(); // Impedir o recarregamento da página
-    e.currentTarget.reset(); // Limpa o campo do input depois do envio da mensagem.
-    navigate(`/search/ ${searchInput}`); // Empurrar o usuário para nova rota que preciso ou quero.
+
+    // formatar para aparecer o nome do filme
+    const formattedTerm = searchInput
+      .trim()
+      .toLowerCase()
+      .replace(/\s+/g, '-'); // Substitui espaços por hífens
+
+    if (formattedTerm) {
+      navigate(`/search/${formattedTerm}`);
+      e.currentTarget.reset(); // Limpa o campo do input depois do envio da mensagem.
+    }
+
+    // navigate(`/search/ ${searchInput}`); // Empurrar o usuário para nova rota que preciso ou quero.
   }
+
+  return <Header handleSubmit={handleSubmit} />
+
 }
 
 function App() {
@@ -35,7 +51,7 @@ function App() {
     < MovieContextProvider >
       <BrowserRouter>
         <div>
-          <Header />
+          <HeaderWrapper />
           {/* Criando as rotas */}
           <Routes>
             {/* Rota inicial */}

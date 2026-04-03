@@ -1,4 +1,4 @@
-import Movie from './Movie.js';
+import MovieCard from './MovieCard.js';
 
 function Gallery({ data }) {
 
@@ -33,7 +33,7 @@ function Gallery({ data }) {
                                     : `https://www.themoviedb.org/assets/2/v4/glyphicons/basic/glyphicons-basic-38-picture-grey-c2ebdbb057f2a76141859358a5cbb23f73303666d2e9305c347aadc65ed60188.svg`;
 
                                 return (
-                                    <Movie
+                                    <MovieCard
                                         key={id}
                                         title={displayTitle} // permite mostrar o título ou o nome ou a informação indispónivel
                                         url={url}

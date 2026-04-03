@@ -4,9 +4,9 @@ function Video(){
     
     return(
 
-        <li>
-            {/* <img */}
-        </li>
+        <div>
+            
+        </div>
     );
 }
 
