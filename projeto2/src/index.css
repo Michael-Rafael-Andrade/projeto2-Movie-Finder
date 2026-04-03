@@ -9,6 +9,7 @@ body {
   text-align: center;
   font-family: "Josefin Sans", Arial, Helvetica, sans-serif;
   color: #3f4850;
+  background-color: #f4f7f9;
 
 
 
@@ -35,14 +36,15 @@ h2 {
 
 a {
   text-decoration: none;
+  cursor: pointer;
 }
 
-ul{
+ul {
   list-style-type: none;
   padding-left: 0;
 }
 
-.is-hidden{
+.is-hidden {
   border: 0;
 }
 
@@ -82,6 +84,7 @@ ul{
   border-radius: 3px;
   padding: 5px;
   color: #ffffff;
+  cursor: pointer;
 }
 
 .main-nav li {
@@ -91,7 +94,7 @@ ul{
   width: 100px;
 }
 
-.main-nav ul{
+.main-nav ul {
   display: flex;
   justify-content: center;
 }
@@ -109,4 +112,115 @@ ul{
   border-right: none;
   border-radius: 0.35em 0 0 0.35em;
   outline: none;
+}
+
+
+
+/* lista */
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  justify-content: center;
+  padding: 0;
+}
+
+ul li {
+  margin: 10px;
+}
+
+ul li img {
+  width: 200px;
+  /* ou o tamanho que preferir */
+  border-radius: 8px;
+}
+
+/* Ajuste na lista para envolver os cards */
+.photo-container ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  /* Espaço entre os cards */
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.movie-card {
+  background-color: #ffffff;
+  width: 230px;
+  /* Define uma altura mínima para que todos os cards fiquem iguais */
+  min-height: 520px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+/* Efeito de levante ao passar o mouse */
+.movie-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.movie-card img {
+  width: 100%;
+  height: 330px;
+  object-fit: cover;
+  /* Garante que a foto preencha o espaço sem esticar */
+  border-bottom: 2px solid #edeff0;
+}
+
+.movie-info {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  /* Faz com que este container ocupe todo o espaço restante */
+  flex-grow: 1;
+  gap: 10px;
+}
+
+.movie-info h3 {
+  font-size: 1.1em;
+  margin: 0;
+  color: #051c33;
+  min-height: 2.8em;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  /* Corta o texto com "..." após a 2ª linha */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+
+.rating-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: bold;
+  color: #f1c40f;
+  /* Cor dourada para a estrela */
+}
+
+.rating-box small {
+  color: #7f8c8d;
+  font-weight: normal;
+}
+
+.overview {
+  font-size: 0.85em;
+  line-height: 1.4;
+  color: #3f4850;
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 7;
+  /* Limita a sinopse a 7 linhas */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-align: left;
 }
