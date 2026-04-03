@@ -1,3 +1,4 @@
+import Container from './Container.js';
 
 function Item({searchTerm}){
 
@@ -5,7 +6,7 @@ function Item({searchTerm}){
 
         <div>
             <h2>{searchTerm} Movies</h2>
-            <p>Container</p>
+            <Container searchTerm={searchTerm}/>
             
         </div>
     );

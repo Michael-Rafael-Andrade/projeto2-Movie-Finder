@@ -1,10 +1,18 @@
+import { useContext, useEffect } from 'react';
+import { MovieContext } from '../context/MovieContext.js';
 
+function Container({searchTerm}){
 
-function Container(){
+    const { movies, loading, searchMovies } = useContext(MovieContext)
+
+    useEffect(() => {
+        console.log("Buscando por: ", searchTerm);
+        searchMovies(searchTerm);
+    }, [searchTerm]);
 
     return(        
         <div>
-
+            {loading ? (<p>Loading</p>) : (<p>Gallery</p>)}
         </div>
     );
 }
