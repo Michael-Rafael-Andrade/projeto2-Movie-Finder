@@ -11,3 +11,9 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+h1 {
+  font-family: 'Lobster', "Josefin Sans", Arial, Helvetica, sans-serif;
+  font-size: 4em;
+  color: #051c33;
+}

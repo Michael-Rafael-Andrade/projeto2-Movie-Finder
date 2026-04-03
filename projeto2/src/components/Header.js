@@ -1,11 +1,12 @@
-// import 
+import Navigation from "./Navigation.js";
 
-function Header( {handleSubmit} ){
+function Header({handleSubmit}){
 
     return(
         <header>
             <h1>Header - Vídeos</h1>
-            <p>Navigation</p>
+            <p>Form</p>
+            <Navigation/>
         </header>
         
     );
