@@ -4,7 +4,7 @@ function Navigation() {
 
     return (
 
-        <nav>
+        <nav className="main-nav">
             <ul>
                 <li><NavLink to='/action'>Action</NavLink></li>
                 <li><NavLink to='/romance'>Romance</NavLink></li>
