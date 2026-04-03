@@ -1,4 +1,5 @@
 import { createContext, useState } from "react";
+import { apiKey } from '../apiKey/Config.js';
 
 
 
@@ -9,11 +10,14 @@ function MovieContext() {
     const [videos, setVideos] = useState([]);
     const [loading, setLoading] = useState(false);
 
-    function runSearch(query){
+    async function searchMovies(query){
 
+        const url = ``;
         setLoading(true);
 
         try{
+            const response=await fetch(url);
+            const data=await response.json();
             
         }catch(error){
             console.error("Erro ao buscar vídeos: ", error);
