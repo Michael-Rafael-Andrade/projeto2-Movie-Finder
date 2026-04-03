@@ -8,27 +8,25 @@ export const MovieContext = createContext();
 
 function MovieContextProvider(props) {
 
-    // const MovieContext = createContext();
 
     const [movies, setMovies] = useState([]);
     const [loading, setLoading] = useState(false);
 
     async function searchMovies(query) {
 
-        const url = `https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}`;
-
         setLoading(true);
         setMovies([]);
 
         console.log("true");
         try {
+            const url = `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${query}`;
             // const response = await fetch(url);
             // const data = await response.json();
 
             const response = await axios.get(url);
 
             console.log("response");
-            setMovies(response.data.movies.movie);
+            setMovies(response.data.results || []);
 
         } catch (error) {
             console.error("Erro ao buscar vídeos: ", error);

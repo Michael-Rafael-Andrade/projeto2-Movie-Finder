@@ -17,3 +17,22 @@ h1 {
   font-size: 4em;
   color: #051c33;
 }
+
+.search-form {
+  max-width: 460px;
+  display: flex;
+  margin: 0 auto 32px;
+}
+
+.search-form button{
+  outline: none;
+  padding: 0 15px;
+  border-radius: 0.35em 0 0 0.35em;
+  cursor: pointer;
+  border: 3px solid #d7dbdf;
+}
+
+.active {
+  background-color: #051c33;
+  cursor: pointer;
+}

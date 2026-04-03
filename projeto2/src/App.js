@@ -7,34 +7,35 @@ import NotFound from './components/NotFound.js';
 
 function App() {
   return (
-
-    <MovieContextProvider> {/* componente pai */}
+    /* componente pai */
+    < MovieContextProvider >
       <BrowserRouter>
         <div>
           <Header />
-
-          <Routes> {/* Criando as rotas */ }
+          {/* Criando as rotas */}
+          <Routes>
             {/* Rota inicial */}
-            <Route path='/' element={<Navigate to='action' replace />}/>
+            <Route path='/' element={<Navigate to='action' replace />} />
 
             {/* Rotas para as categorias fixas */}
-            <Route path='/Action' element={<Item searchTerm='Action'/>}/>
-            <Route path='/Romance' element={<Item searchTerm='Romance'/>}/>
-            <Route path='/Suspense' element={<Item searchTerm='Suspense'/>}/>
-            <Route path='/Comedy' element={<Item searchTerm='Comedy'/>}/>
+            <Route path='/action' element={<Item searchTerm='Action' />} />
+            <Route path='/romance' element={<Item searchTerm='Romance' />} />
+            <Route path='/suspense' element={<Item searchTerm='Suspense' />} />
+            <Route path='/comedy' element={<Item searchTerm='Comedy' />} />
 
-            {/* Rotas dinâmicas */}
-            {/* <Route path='/search/:searchInput' element={<search} */}
+            {/*  Rotas dinâmicas  */}
+            {/* /* <Route path='/search/:searchInput' element={<search} */}
 
 
 
             {/* Rota Not Found */}
-            <Route path='*' element={<NotFound />}/>
+            <Route path='*' element={<NotFound />} />
 
           </Routes>
-        </div>
-      </BrowserRouter>
-    </MovieContextProvider>
+        </div >
+      </BrowserRouter >
+    </MovieContextProvider >
+
 
   );
 }
