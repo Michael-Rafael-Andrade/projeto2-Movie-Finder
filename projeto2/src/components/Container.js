@@ -13,7 +13,7 @@ function Container({searchTerm}){
     }, [searchTerm]);
 
     return(        
-        <div>
+        <div className="movie-container">
             {loading ? <Loader/> : <Gallery data={movies}/>}
         </div>
     );

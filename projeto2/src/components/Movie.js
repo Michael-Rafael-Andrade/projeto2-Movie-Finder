@@ -1,11 +1,8 @@
+import {displayTitle} from './Gallery';
 
 function Movie({ title, url, overview, rating, votes, date, video }) {
 
     return (
-
-        //    <li>
-        //         <img src={url} alt={title}></img>
-        //    </li>
 
         <li className="movie-card">
             {/* Foto/Poster */}

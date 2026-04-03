@@ -1,10 +1,12 @@
+import Container from './Container.js';
 
-
-function Search(){
+function Search({searchTerm}){
 
     return(
 
         <div>
+            <h2>{searchTerm} Movie</h2>
+            <Container searchTerm={searchTerm} />
         </div>
     );
 }

@@ -76,7 +76,18 @@ ul {
   animation: spin 2s linear infinite;
   margin-right: auto;
   margin-left: auto;
+
 }
+
+@keyframes spin{
+  0%{
+     transform: rotate(0deg );
+  }
+  100%{
+     transform: rotate(360deg );
+  }
+}
+
 
 .main-nav a {
   display: block;
@@ -228,3 +239,29 @@ ul li img {
   overflow: hidden;
   text-align: left;
 }
+
+.movie-container ul{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  -ms-align-items: flex;
+  align-items: felx-start;
+}
+
+.movie-container ul li{
+  width: 220px;
+  height: 165px;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+
+.movie-container ul img{
+  width: 100%;
+  transform: scale(1.25);
+  transition: transform 1.25s;
+}
+
+.movie-container li:hover img{
+  transform: scale(1.65);
+}
+

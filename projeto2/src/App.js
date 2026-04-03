@@ -1,10 +1,33 @@
 import './App.css';
 import MovieContextProvider from './context/MovieContext.js';
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Navigate, useParams, useNavigate } from 'react-router-dom';
 import Header from './components/Header.js';
 import Item from './components/Item.js';
 import NotFound from './components/NotFound.js';
 import { useState } from 'react';
+import Search from './components/Search';
+
+
+
+function SearchWrapper() {
+  const { searchInput } = useParams(0);
+  return <Search searchTerm={searchInput} />
+}
+
+
+function HeaderWrapper() {
+
+
+  // HOOK para mudar a url do navegador programaticamente!
+  const navigate = useNavigate();
+
+
+  function handleSubmit(e, searchInput) {
+    e.preventDefault(); // Impedir o recarregamento da página
+    e.currentTarget.reset(); // Limpa o campo do input depois do envio da mensagem.
+    navigate(`/search/ ${searchInput}`); // Empurrar o usuário para nova rota que preciso ou quero.
+  }
+}
 
 function App() {
   return (
@@ -25,7 +48,7 @@ function App() {
             <Route path='/comedy' element={<Item searchTerm='Comedy' />} />
 
             {/*  Rotas dinâmicas  */}
-            {/* /* <Route path='/search/:searchInput' element={<Search />} */}
+            <Route path='/search/:searchInput' element={<SearchWrapper />} />
 
 
 
