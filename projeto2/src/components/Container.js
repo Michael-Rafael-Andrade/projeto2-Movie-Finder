@@ -1,6 +1,7 @@
 import { useContext, useEffect } from 'react';
 import { MovieContext } from '../context/MovieContext.js';
 import Loader from './Loader.js';
+import Gallery from './Gallery.js';
 
 function Container({searchTerm}){
 
@@ -13,7 +14,7 @@ function Container({searchTerm}){
 
     return(        
         <div>
-            {loading ? <Loader/> : (<p>Gallery</p>)}
+            {loading ? <Loader/> : <Gallery data={movies}/>}
         </div>
     );
 }

@@ -1,6 +1,6 @@
 
 
-function Gallery(){
+function Gallery({data}){
 
     return(
         <div>
@@ -8,3 +8,5 @@ function Gallery(){
         </div>
     );
 }
+
+export default Gallery;
