@@ -1,6 +1,6 @@
 import './App.css';
 import MovieContextProvider from './context/MovieContext.js';
-import { BrowserRouter, Routes, Route, Navigate, useParams, useNavigate } from 'react-router-dom';
+import { HashRouter, BrowserRouter, Routes, Route, Navigate, useParams, useNavigate } from 'react-router-dom';
 import Header from './components/Header.js';
 import Item from './components/Item.js';
 import NotFound from './components/NotFound.js';
@@ -49,7 +49,8 @@ function App() {
   return (
     /* componente pai */
     < MovieContextProvider >
-      <BrowserRouter>
+      {/* <BrowserRouter> */}
+      <HashRouter>
         <div>
           <HeaderWrapper />
           {/* Criando as rotas */}
@@ -73,7 +74,8 @@ function App() {
 
           </Routes>
         </div >
-      </BrowserRouter >
+      </HashRouter>
+      {/* </BrowserRouter > */}
     </MovieContextProvider >
 
 

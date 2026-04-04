@@ -27,3 +27,8 @@ api_Key
 api_key
 api_Key/Config.js
 api_key/Config.js
+
+# .gitignore
+node_modules
+build
+.env
