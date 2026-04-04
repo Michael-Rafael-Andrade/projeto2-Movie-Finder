@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/projeto2-Movie-Finder/static/css/main.09ac868b.css",
+    "main.js": "/projeto2-Movie-Finder/static/js/main.6f958a40.js",
+    "static/js/453.3e58d663.chunk.js": "/projeto2-Movie-Finder/static/js/453.3e58d663.chunk.js",
+    "index.html": "/projeto2-Movie-Finder/index.html",
+    "main.09ac868b.css.map": "/projeto2-Movie-Finder/static/css/main.09ac868b.css.map",
+    "main.6f958a40.js.map": "/projeto2-Movie-Finder/static/js/main.6f958a40.js.map",
+    "453.3e58d663.chunk.js.map": "/projeto2-Movie-Finder/static/js/453.3e58d663.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.09ac868b.css",
+    "static/js/main.6f958a40.js"
+  ]
+}
